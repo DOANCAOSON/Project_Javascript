@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base/grid.css">
+    <link rel="stylesheet" href="base/style.css">
+    <link rel="stylesheet" href="base/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="web">
+        <!-- Web header -->
+        <header class="header">
+            <div class="header-box">
+
+                <!-- Header navbar -->
+                <nav class="header_nav nav-wrap">
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="col l-4 m-4 c-12 item-1">
+                                <div class="header_nav-contact">
+                                    <i class="fas fa-phone-alt header_nav-contact-icon"></i>
+                                    <span class="header_nav-contact-phone">+1 (800) 312-2121</span>
+                                </div>
+                            </div>
+        
+                            <div class="col l-4 m-4 c-12 item-2">
+                                <div class="header_nav-image">
+                                    <img src="image/logo-df.svg" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="col l-4 m-4 c-12 item-3">
+                                <div class="header_nav-map">
+                                    <i class="fas fa-map-marker-alt header_nav-map-icon"></i>
+                                    <span class="header_nav-map-address">172 14th Street, Office 503</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- Header menu -->
+                <section class="header_menu">
+                    <div class="grid wide">
+                        <div class="row box">
+                            <div class="col l-4 m-4 c-6 menu_item-1">
+                                <div class="header-social">
+                                   <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col l-4 m-4 c-12 menu_item-2">
+                                <div class="menu-container">
+                                    <ul class="menu-list">
+                                        <li class="menu-list-item">
+                                            <a href="" class="menu-list-item-link">HOME</a>
+                                        </li>
+                                        <li class="menu-list-item">
+                                            <a href="#about" class="menu-list-item-link">ABOUT</a>
+                                        </li>
+                                        <li class="menu-list-item">
+                                            <a href="#food" class="menu-list-item-link">FO0D</a>
+                                        </li>
+                                        <li class="menu-list-item">
+                                            <a href="#delivery" class="menu-list-item-link">DELIVERY</a>
+                                        </li>
+                                        <li class="menu-list-item">
+                                            <a href="#contact" class="menu-list-item-link">CONTACT</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+
+                            <div class="col l-4 m-4 c-6 menu_item-3">
+                                <div class="header_menu-cart">
+                                    <div class="menu_user"> 
+                                      <span>Account</span>
+                                      
+                                      <div class="user_item">
+                                        <button href="" class="user-login">Login</button>
+                                        <button href="" class="user-register">Register</button>
+                                      </div>
+                                    </div>
+
+                                    <i class="fas fa-cart-plus" id="cart-icon"></i>
+                                    <input type="text" value="0" class="input-cart-num" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </header>
+
+
+            
+        <!-- Modal form -->
+        <div class="modal_form">
+            <div class="modal_form-overlay">
+                <div class="form-overlay-body">
+                    <div class="form-overlay-inner">
+                        
+                        <!-- Form Đăng ký -->
+                        <form action="" method="POST" class="form" id="form-register">
+                        <div class="form_close">
+                            <i class="fas fa-times form_close-icon" id="closer"></i>
+                        </div>
+                            <h3 class="heading">Đăng ký</h3>
+
+                            <div class="spacer"></div>
+                        
+                            <div class="form-group">
+                            <label for="fullname" class="form-label">Tên đầy đủ</label>
+                            <input autocomplete="off" id="fullname" name="fullname" rules="required" type="text" placeholder="VD: Thanh tú" class="form-control">
+                            <span class="form-message"></span>
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input autocomplete="off" id="email" name="email" rules="required|email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                        <span class="form-message"></span>
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input autocomplete="off" id="password" name="password" rules="required|min:6" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                            <span class="form-message"></span>
+                            </div>
+                        
+                            <button class="form-submit">Đăng ký</button>
+                        </form>
+
+
+                        <!-- Form Đăng nhập -->
+                        <form action="" method="POST" class="form" id="form-login">
+                            <div class="form_close">
+                                <i class="fas fa-times form_close-icon" id="closer"></i>
+                            </div>
+                            <h3 class="heading">Đăng nhập</h3>
+
+                            <div class="spacer"></div>
+
+                            <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input autocomplete="off" id="email" name="email" rules="required|email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                            <span class="form-message"></span>
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input autocomplete="off" id="password" name="password" rules="required|min:6" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                            <span class="form-message"></span>
+                            </div>
+                        
+                            <button class="form-submit">Đăng nhập</button>
+
+                            <a class="login_forgot-password" href="">Forgot password</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Web Container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="container_slider">
+                            <div class="slide-wrap active">
+                                <img class="container_slider-image" src="image/Depositphotos_166567036_el0.webp" alt="">
+                                <section class="container_slider-info">
+                                    <img src="image/food.svg" alt="">
+                                    <h1 class="slider-info-title">DELIVERY</h1>
+                                    <div class="container_slider-info-old">
+                                        <span>We’re proud to have our burger’s history 
+                                            <br>being as long as 25 years!
+                                        </span>
+                                    </div>
+                                    <button class="slider-info-order">
+                                        <span>ORDER NOW</span>
+                                    </button>
+                                </section>
+                            </div>
+
+                            <div class="slide-wrap">
+                                    <img class="container_slider-image" src="image/slide2.jpg" alt="">
+                                <section class="container_slider-info">
+                                    <img src="image/food.svg" alt="">
+                                    <h1 class="slider-info-title">DELIVERY</h1>
+                                    <div class="container_slider-info-old">
+                                        <span>We’re proud to have our burger’s history 
+                                            <br>being as long as 25 years!
+                                        </span>
+                                    </div>
+                                    <button class="slider-info-order">
+                                        <span>ORDER NOW</span>
+                                    </button>
+                                </section>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <img class="container_slider-image" src="image/slide3.jpg" alt="">
+                                <section class="container_slider-info">
+                                    <img src="image/food.svg" alt="">
+                                    <h1 class="slider-info-title">DELIVERY</h1>
+                                    <div class="container_slider-info-old">
+                                        <span>We’re proud to have our burger’s history 
+                                            <br>being as long as 25 years!
+                                        </span>
+                                    </div>
+                                    <button class="slider-info-order">
+                                        <span>ORDER NOW</span>
+                                    </button>
+                                </section>
+                            </div>
+
+                            <div class="navigation">
+                                <div class="navigation-dot active"></div>
+                                <div class="navigation-dot"></div>
+                                <div class="navigation-dot"></div>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container intro -->
+                <div class="container_intro" id="about">
+                    <div class="row">
+                        <div class="col l-6 m-12 c-12">
+                            <div class="container_intro-image">
+                                <img src="image/Untitled-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col l-6 m-12 c-12">
+                            <div class="container_intro-content">
+                                <h1 class="intro-content-title">BEST PRISE ALWAYS</h1>
+                                <div class="intro-content-start">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                                <div class="intro-content-text">
+                                    The perfect place to enjoy the life & delicious food with your friends!
+                                    Our family has been in the restaurant business for a very  long time. 
+                                    Nowadays we can proudly boast our reputation for a  well known restaurant
+                                    in our area. We are famous for the fabulous  authentic cuisine, professional
+                                    chef and dedicated staff….					
+                                </div> 
+
+                                <div class="row">
+                                    <div class="intro-content-icon">
+                                        <div class="col l-4">
+                                            <div class="intro-content-icon-image">
+                                                <img src="image/fav1.svg" alt="">
+                                            </div>
+                                            <h3>good food</h3>
+                                        </div>
+                                        <div class="col l-4">
+                                            <div class="intro-content-icon-image icon-image-2">
+                                                <img src="image/fav2.svg" alt="">
+                                            </div>
+                                            <h3>fast delivery</h3>
+                                        </div>
+                                        <div class="col l-4">
+                                            <div class="intro-content-icon-image">
+                                                <img src="image/fav3.svg" alt="">
+                                            </div>
+                                            <h3>nice prise</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Container category reivew -->
+                <div class="container_category">
+                    <div class="row">
+                        <div class="col l-4 m-4 c-12">
+                            <div class="container_category-box">
+                                <div class="category-box-text">
+                                    <span>From</span>
+                                    <span class="category-box-text-time">17s</span>
+                                    <h3>BEEF CLASSIC</h3>
+                                    <h2>BURGERS</h2>
+                                    <div class="category-box-text-content">
+                                        <p>Try this delicious burger containing of two fried parts of a whole-grain bun, a juicy piece of beef, cheese and lettuce</p>
+                                    </div>
+                                </div>
+                                <div class="category-box-btn">
+                                    <a href=""><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col l-4 m-4 c-12">
+                           <div class="container_category-image category-image-item-1">
+                               <img src="image/Depositphotos_16238571_xl-1.webp" alt="">
+                           </div>
+                        </div>
+
+                        <div class="col l-4 m-4 c-12">
+                            <div class="container_category-box">
+                                <div class="category-box-text">
+                                    <span>From</span>
+                                    <span class="category-box-text-time">13.50s</span>
+                                    <h3>Season soup</h3>
+                                    <div class="category-box-text-content">
+                                        <p>We offer you a special dish – our season soup containing season vegetables</p>
+                                    </div>
+                                </div>
+                                <div class="category-box-btn">
+                                    <a href=""><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col l-4 m-4 c-12">
+                            <div class="container_category-image category-image-item-2">
+                                <img src="image/Depositphotos_12318613_el0.png">
+                            </div>
+                         </div>
+
+                         <div class="col l-4 m-4 c-12">
+                            <div class="container_category-box">
+                                <div class="category-box-text">
+                                    <span>From</span>
+                                    <span class="category-box-text-time">12.00s</span>
+                                    <h3>The best pasta</h3>
+                                    <div class="category-box-text-content">
+                                        <p>Our pasta with seafood is mixed perfectly with a glass of white wine</p>
+                                    </div>
+                                </div>
+                                <div class="category-box-btn">
+                                    <a href=""><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+    
+                        <div class="col l-4 m-4 c-12">
+                            <div class="container_category-image category-image-item-3">
+                                <img src="image/Depositphotos_41260055_el0-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <!-- Modal products -->
+            <div class="modal_products" id="modal">
+                <div class="modal_products-overlay">
+                    <div class="modal_products-body">
+                        <div class="modal_products-inner">
+
+                            <div class="products_cart-wrap">
+                                <div class="modal_close">
+                                    <i class="fas fa-times modal_close-icon"></i>
+                                </div>
+                    
+                                   <h1>Your cart</h1>
+                                   
+                                  <div class="cart-wrap-box">
+                            
+                                  </div>
+                    
+                                <div class="cart_item_grand">
+                                    <h2>Grand Total: </h2>
+                                    <span class="grand-total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <!-- Container Products -->
+           <div class="container_products" id="food">
+               <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 m-6 c-12">
+                        <div class="container_products-header">
+                            <h2>Out Products</h2>
+                        </div>
+                    </div>
+
+                    <div class="col l-6 m-6 c-12">
+                        <div class="container_products-header">
+                            <input class="search-bar" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row container_products-box"></div>
+                
+                <div class="row">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="container_page">
+                            <div class="container_page-content">
+                                <i class="fas fa-chevron-left"></i>
+                                   <div class="container_page-content-box">
+                                        <button class="container_page-content-btn active_btn">1</button>
+                                        <button class="container_page-content-btn">2</button>
+                                        <button class="container_page-content-btn">3</button>
+                                        <span>...</span>
+                                   </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    
+        <!-- Contact -->
+        <div class="contact_box">
+           <div class="grid wide">
+            <div id="delivery">
+                <div class="row">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="contact_intro">
+                            <div class="contact_intro-image">
+                                <img src="/image/Group-2-2.png" alt="">
+                            </div>
+                            <div class="contact_intro-content">
+                                <h2>CHOOSE</h2> 
+                                <img src="image/fav4.svg" alt="">
+                            </div>
+                            <div class="contact_intro-text">
+                                Select food, which you want now the most and don’t forget about drinks	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="contact_intro">
+                            <div class="contact_intro-content">
+                                <h2>Make an order</h2> 
+                                <img src="image/fav5.svg" alt="">
+                            </div>
+                            <div class="contact_intro-text">
+                                Contact us and provide our agent with correct information about your order	
+                            </div>
+                            <div class="contact_intro-image">
+                                <img src="/image/Group-3-1.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="contact_intro">
+                            <div class="contact_intro-image">
+                                <img src="/image/Depositphotos_59221053_el0.webp" alt="">
+                            </div>
+                            <div class="contact_intro-content">
+                                <h2>Receive</h2> 
+                                <img src="image/fav6.svg" alt="">
+                            </div>
+                            <div class="contact_intro-text">
+                                Get your order as quickly as possible and enjoy your meal	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+               <div class="row contact-container" id="contact">
+                    <div class="col l-6 m-6 c-12 contact_box-info">
+                        <div class="contact_box-item">
+                            <h2>CONTACT US</h2>
+
+                            <div class="contact_box-content">
+                                <ul class="box-content-list">
+                                    <li class="content-list-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>34 Fordham Street, New York</span>
+                                    </li>
+                                    <li class="content-list-item">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>+1 (800) 312-2121</span>
+                                    </li>
+                                    <li class="content-list-item content-list-item-3">
+                                        <i class="far fa-clock"></i>
+                                        <span>
+                                            Monday-Friday: 9:00 am - 6:00 pm <br>Saturday: 9:00 am - 4:00 pm
+                                        </span>
+                                    </li>
+                                    <li class="content-list-item">
+                                        <i class="far fa-envelope"></i>
+                                        <span>Send us an email</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col l-6 m-6 c-12 contact_message-wrap">
+                        <h2 class="contact_sen-dmessage">Send Us a Message</h2>
+                        <div class="contact_box-item-form">
+                            <div class="container_contact-form">
+                                <form action="" id="contact_form">
+                                    <div class="contact_form-group">
+                                        <input id="yourname" class="form-control yourname" type="text" name="yourname" placeholder="Enter your name">
+                                        <span class="form-message"></span>
+                                    </div>
+            
+                                    <div class="contact_form-group">
+                                        <input id="email" class="form-control email" type="text" name="email"  placeholder="Enter email address">
+                                        <span class="form-message"></span>
+                                    </div>
+            
+                                    <div class="contact_form-group">
+                                        <textarea id="message" class="form-control message" type="text" name="message"  placeholder="Message"></textarea>
+                                        <span class="form-message"></span>
+                                    </div>
+            
+            
+                                    <button class="header_container-btn contact_form-btn">
+                                        <span>Seed Message</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+
+
+
+       <!-- Web Footer -->
+        <div class="grid">
+            <footer class="footer" style="background-image: url(image/Footer.jpg);">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-4 m-12 c-12">
+                            <div class="footer_item">
+                                <h3>About Us</h3>
+                                <p>Sorem ipsum dolor amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                
+                                <ul class="footer_item-social">
+                                    <li>
+                                        <a href="" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="google"><i class="fab fa-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-12 c-12">
+                            <div class="footer_item">
+                                <h3>Instragram Food</h3>
+                                <div class="footer_item-image">
+                                    <img src="image/footer1.jpg" alt="">
+                                    <img src="image/footer2.jpg" alt="">
+                                    <img src="image/footer1.jpg" alt="">
+                                    <img src="image/footer2.jpg" alt="">
+                                    <img src="image/footer2.jpg" alt="">
+                                    <img src="image/footer1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-12 c-12">
+                            <div class="footer_item">
+                                <h3>Our Company</h3>
+                                <div class="footer_company">
+                                    <a href="">Price drop</a>
+                                    <a href="">New product</a>
+                                    <a href="">Best sales</a>
+                                    <a href="">Stores</a>
+                                    <a href="">Sitemap</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
