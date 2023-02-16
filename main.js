@@ -403,46 +403,6 @@ function renderProducts(e) {
   );
   pageActive.classList.remove("active_btn");
   this.classList.add("active_btn");
-
-  // poducts page 1
-  if (btn == 2) {
-    let Api = "https://vithanhtu.herokuapp.com/carts2";
-    let productsBox = document.querySelector(".container_products-box");
-
-    fetch(Api)
-      .then((response) => {
-        return response.json();
-      })
-      .then((carts) => {
-        let htmls = carts.map((cart) => {
-          return `
-                        <div class="col l-3 m-6 c-12 productsWrap" id="${cart.id}">
-                        <div class="container_products-item">
-                            <div class="products-item-image">
-                                <img src="${cart.image}" alt="">
-                            </div>
-                            <div class="products-item-content">
-                                <h3 class="products-name">${cart.name}</h3>
-                                <p class="products-price">${cart.price}</p>
-                                
-                            <div class="products-item-box">
-                                <button class="products-item-btn"  onclick=addToCart(${cart.id})>
-                                    <i class="fas fa-cart-plus"></i>
-                                    <span>ADD TO CART</span>
-                                </button>
-                            </div>
-                            </div>
-                            </div>
-                        </div>`;
-        });
-
-        productsBox.innerHTML = htmls.join("");
-      });
-
-    // products page 2
-  } else if (btn == 1) {
-    return handleProducts();
-  }
 }
 
 // Search bar
